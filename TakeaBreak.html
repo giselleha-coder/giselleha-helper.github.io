@@ -16,14 +16,29 @@
 
 
 
+<div class="wrapper">
+   <div class="timer">
+     <h2>Timer</h2>
+     </div>
 
+  <div class="spotify">
+    <h2>Music</h2> Here are some playlists to help with keeping you focus in you break and during homework </div>
+  <div class="music1">
   <iframe src="https://open.spotify.com/embed/playlist/1aeZv1CYwR39C6lf2mK1Bj" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  <iframe src="https://open.spotify.com/embed/playlist/0OOZzfr4olaGarfeaydGZf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>   <canvas id="game" width="400" height="400"></canvas>   <p>
-      Use arrow keys to move.
-    </p>
+</div>
+<div class="music2">
+  <iframe src="https://open.spotify.com/embed/playlist/0OOZzfr4olaGarfeaydGZf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<div class="snakegame">
+<h2>Games!!!</h2> <p>Use your arrow keys to move. See how long you can last. Good Luck!        </p><canvas id="game" width="400" height="400"></canvas>
+</div>
+</div>
+
+
+
+
+
   <script>
 
   var canv = document.getElementById("game");
@@ -35,7 +50,10 @@
   var apple_y = 15;
   var trail = [];
   var tail = 5;
-
+  var now = new Date();
+     var hour = now.getHours();
+     var minute = now.getMinutes();
+     var second = now.getSeconds();
 
   function draw() {
     Player.x += Player.xMovement;
@@ -119,6 +137,22 @@
   document.addEventListener("keydown", keyPush);
 
   setInterval(draw, 1000 / 10);
+
+
+  function Time(){
+    console.console.log(now);
+  }
+  document.getElementById("time").innerHTML = now
+
+
+
+
+
+
+
+
+
+
 
       </script>
   </body>

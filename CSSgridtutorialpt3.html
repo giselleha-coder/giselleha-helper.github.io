@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Css Grids </title>
+  <style>
+  .wrapper{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows:minmax(100px, auto);
+    grid-gap:1em;
+    justify-items:stretch;
+    align-items:stretch;
+}
+
+  .wrapper > div{
+    background:#eee;
+    padding:1em;
+  }
+  .wrapper > div:nth-child(odd){
+    background:#ddd;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class= "wrapper">
+
+    <input type="text" id="myInput" value="time">
+  <button onclick="readTime()">Start</button>
+
+</div>
+
+<p id="demo"> </p>
+<script>
+
+
+
+
+function readTime(){
+  var min = document.getElementById("myInput").value;
+  let sec = min*60;
+  document.getElementById("demo").innerHTML = sec;
+  //var countdown = setInterval(timer ,1000);
+  timer(sec, min);
+
+}
+//add an actual for loop to execute sec_in every single second//
+function timer(sec_in, min_in) {
+
+  sec_in -=1;
+  window.alert(sec_in)
+  timeGoBy = sec_in;
+  document.getElementById("demo").innerHTML = timeGoBy;
+  //var countdown = setInterval(timer ,1000);
+  //CD()
+}
+//
+//funtion CD(timeGoBy_in){
+//  timeGoBy_in -= 1;
+//  document.getElementById("demo").innerHTML = timeGoBy_in;
+//}
+
+
+</script>
+
+  </body>
+</html>
