@@ -19,7 +19,8 @@
 <div class="column">
   <h4> My Website helps you:</h4>
 <p>Find surprising HW Help reources such as videos, websites and more!
-Learn what works best for your learning time, set goals, and learn how to manage your time!</p>
+Learn what works best for your learning time, set goals, and learn how to manage your time!
+My search bar will help you in your specific info based searches and will lead you to Webistes lile Khan Academy and Actively Learn.</p>
 </div>
 
 <div class="column">
@@ -45,7 +46,7 @@ Learn what works best for your learning time, set goals, and learn how to manage
 
 
 <ol id="myUL">
-<li id="user-input"></li>
+
 </ol>
 
 
@@ -62,7 +63,7 @@ Learn what works best for your learning time, set goals, and learn how to manage
 
 
 function newElement() {
-  var x = document.createElement("LI");
+  var x = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   x.appendChild(t);
@@ -71,16 +72,16 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(x);
   }
-
+  document.getElementById("myInput").value = "";
 }
 
 
-function myFunction() {
+/*unction myFunction() {
   var x = document.createElement("LI");
   var t = document.createTextNode("Coffee");
   x.appendChild(t);
   document.getElementById("myList").appendChild(x);
-}
+}*/
 
 
 

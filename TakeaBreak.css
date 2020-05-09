@@ -14,7 +14,7 @@ p{
 body {
      background:#1ac6ff;
      font-family: "Verdana", Sans-serif;
-
+     transition: 200ms ease;
 }
 
 .wrapper{
@@ -24,6 +24,13 @@ body {
   padding-top: 20px;
   padding-left: 1px;
   padding-right: 1px;
+  background: #1ac6ff;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows:minmax(auto);
   background: #1ac6ff;
 }
 .wrapper > div{

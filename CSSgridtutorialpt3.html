@@ -29,7 +29,7 @@
   <div class= "wrapper">
 
     <input type="text" id="myInput" value="time">
-  <button onclick="readTime()">Start</button>
+  <button onclick="updateMin()">Start</button>
 
 </div>
 
@@ -37,31 +37,31 @@
 <script>
 
 
+var sec;
+var i;
+var countdown = setInterval(readTime, 1000);
 
+function updateMin(){
+  let min = document.getElementById("myInput").value;
+  console.log("The value of min is:" + min);
+  sec = min*60;
+  console.log("The value of sec is:" + sec);
+  document.getElementById("demo").innerHTML = sec - i;
+  i = 1;
+  console.log("The value of i is:" + i);
+  }
 
-function readTime(){
-  var min = document.getElementById("myInput").value;
-  let sec = min*60;
-  document.getElementById("demo").innerHTML = sec;
-  //var countdown = setInterval(timer ,1000);
-  timer(sec, min);
+function readTime() {
+  console.log("The value of sec is:" + sec);
+  if (sec == i) {
+    document.getElementById("demo").innerHTML = "Time is up!";
+    return
+  }
 
+document.getElementById("demo").innerHTML = sec - i;
+  i = i + 1
+  console.log("The value of i is:" + i);
 }
-//add an actual for loop to execute sec_in every single second//
-function timer(sec_in, min_in) {
-
-  sec_in -=1;
-  window.alert(sec_in)
-  timeGoBy = sec_in;
-  document.getElementById("demo").innerHTML = timeGoBy;
-  //var countdown = setInterval(timer ,1000);
-  //CD()
-}
-//
-//funtion CD(timeGoBy_in){
-//  timeGoBy_in -= 1;
-//  document.getElementById("demo").innerHTML = timeGoBy_in;
-//}
 
 
 </script>
